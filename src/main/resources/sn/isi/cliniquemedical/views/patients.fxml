@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sn.isi.cliniquemedical.controller.PatientController"
+      spacing="10" style="-fx-background-color: #f4f6f8;">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Gestion des Patients" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <!-- BARRE DE RECHERCHE + BOUTON -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="searchField" promptText="Rechercher un patient..." prefWidth="300"
+                   style="-fx-padding: 8; -fx-background-radius: 5;"/>
+        <Button text="🔍 Rechercher" onAction="#handleRechercher"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="➕ Nouveau Patient" onAction="#handleAjouter"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- TABLEAU -->
+    <TableView fx:id="tablePatients" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colNom" text="Nom" prefWidth="120"/>
+            <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="120"/>
+            <TableColumn fx:id="colDateNaissance" text="Date Naissance" prefWidth="130"/>
+            <TableColumn fx:id="colSexe" text="Sexe" prefWidth="80"/>
+            <TableColumn fx:id="colTelephone" text="Téléphone" prefWidth="120"/>
+            <TableColumn fx:id="colGroupeSanguin" text="Groupe Sanguin" prefWidth="120"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+</VBox>

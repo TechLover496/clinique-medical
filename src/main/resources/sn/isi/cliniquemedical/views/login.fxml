@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sn.isi.cliniquemedical.controller.LoginController"
+      alignment="CENTER" spacing="20"
+      style="-fx-background-color: #1e2a38;"
+      prefWidth="400" prefHeight="500">
+
+    <padding><Insets top="50" right="50" bottom="50" left="50"/></padding>
+
+    <Label text="Clinique Médicale" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: white;"/>
+    <Label text="Connexion" style="-fx-font-size: 16; -fx-text-fill: #aaaaaa;"/>
+
+    <TextField fx:id="usernameField" promptText="Nom d'utilisateur"
+               style="-fx-background-color: #2d3e50; -fx-text-fill: white; -fx-prompt-text-fill: gray; -fx-padding: 10; -fx-background-radius: 5;"/>
+
+    <PasswordField fx:id="passwordField" promptText="Mot de passe"
+                   style="-fx-background-color: #2d3e50; -fx-text-fill: white; -fx-prompt-text-fill: gray; -fx-padding: 10; -fx-background-radius: 5;"/>
+
+    <Label fx:id="errorLabel" style="-fx-text-fill: #e74c3c;" text=""/>
+
+    <Button fx:id="loginButton" text="Se connecter" onAction="#handleLogin"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 10 30; -fx-background-radius: 5; -fx-cursor: hand;"
+            maxWidth="Infinity"/>
+</VBox>

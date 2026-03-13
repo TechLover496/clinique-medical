@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sn.isi.cliniquemedical.controller.RendezVousController"
+      spacing="10" style="-fx-background-color: #f4f6f8;"
+      prefWidth="800" prefHeight="600">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Gestion des Rendez-vous" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Rendez-vous du jour" onAction="#handleAujourdhui"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="Nouveau Rendez-vous" onAction="#handleAjouter"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="Tous" onAction="#handleTous"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TableView fx:id="tableRendezVous" VBox.vgrow="ALWAYS" prefHeight="500">
+        <columns>
+            <TableColumn fx:id="colPatient" text="Patient" prefWidth="150"/>
+            <TableColumn fx:id="colMedecin" text="Medecin" prefWidth="150"/>
+            <TableColumn fx:id="colDateHeure" text="Date et Heure" prefWidth="150"/>
+            <TableColumn fx:id="colMotif" text="Motif" prefWidth="150"/>
+            <TableColumn fx:id="colStatut" text="Statut" prefWidth="100"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+</VBox>

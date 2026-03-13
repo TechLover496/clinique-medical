@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sn.isi.cliniquemedical.controller.DashboardViewController"
+      spacing="20" style="-fx-background-color: #f4f6f8;"
+      prefWidth="800" prefHeight="600">
+
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+
+    <Label fx:id="welcomeLabel" text="Bienvenue !"
+           style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    <Label fx:id="dateLabel" text=""
+           style="-fx-font-size: 14; -fx-text-fill: #7f8c8d;"/>
+
+    <!-- CARTES STATS -->
+    <HBox spacing="20">
+        <!-- Patients -->
+        <VBox style="-fx-background-color: #3498db; -fx-background-radius: 10; -fx-padding: 20;" prefWidth="180">
+            <Label text="Patients" style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            <Label fx:id="nbPatients" text="0" style="-fx-text-fill: white; -fx-font-size: 36; -fx-font-weight: bold;"/>
+            <Label text="Total enregistres" style="-fx-text-fill: #d6eaf8; -fx-font-size: 11;"/>
+        </VBox>
+
+        <!-- Médecins -->
+        <VBox style="-fx-background-color: #2ecc71; -fx-background-radius: 10; -fx-padding: 20;" prefWidth="180">
+            <Label text="Medecins" style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            <Label fx:id="nbMedecins" text="0" style="-fx-text-fill: white; -fx-font-size: 36; -fx-font-weight: bold;"/>
+            <Label text="En service" style="-fx-text-fill: #d5f5e3; -fx-font-size: 11;"/>
+        </VBox>
+
+        <!-- Rendez-vous aujourd'hui -->
+        <VBox style="-fx-background-color: #e67e22; -fx-background-radius: 10; -fx-padding: 20;" prefWidth="180">
+            <Label text="RDV Aujourd'hui" style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            <Label fx:id="nbRdvJour" text="0" style="-fx-text-fill: white; -fx-font-size: 36; -fx-font-weight: bold;"/>
+            <Label text="Rendez-vous du jour" style="-fx-text-fill: #fdebd0; -fx-font-size: 11;"/>
+        </VBox>
+
+        <!-- Factures non payées -->
+        <VBox style="-fx-background-color: #e74c3c; -fx-background-radius: 10; -fx-padding: 20;" prefWidth="180">
+            <Label text="Factures" style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            <Label fx:id="nbFacturesNonPayees" text="0" style="-fx-text-fill: white; -fx-font-size: 36; -fx-font-weight: bold;"/>
+            <Label text="Non payees" style="-fx-text-fill: #fadbd8; -fx-font-size: 11;"/>
+        </VBox>
+    </HBox>
+
+    <!-- RDV DU JOUR -->
+    <VBox style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 20;" VBox.vgrow="ALWAYS">
+        <Label text="Rendez-vous du jour" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+        <TableView fx:id="tableRdvJour" VBox.vgrow="ALWAYS" prefHeight="250">
+            <columns>
+                <TableColumn fx:id="colPatient" text="Patient" prefWidth="200"/>
+                <TableColumn fx:id="colMedecin" text="Medecin" prefWidth="200"/>
+                <TableColumn fx:id="colHeure" text="Heure" prefWidth="100"/>
+                <TableColumn fx:id="colMotif" text="Motif" prefWidth="200"/>
+                <TableColumn fx:id="colStatut" text="Statut" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox>

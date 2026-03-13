@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sn.isi.cliniquemedical.controller.ConsultationController"
+      spacing="10" style="-fx-background-color: #f4f6f8;">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Gestion des Consultations" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="➕ Nouvelle Consultation" onAction="#handleAjouter"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TableView fx:id="tableConsultations" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colPatient" text="Patient" prefWidth="150"/>
+            <TableColumn fx:id="colMedecin" text="Médecin" prefWidth="150"/>
+            <TableColumn fx:id="colDate" text="Date" prefWidth="130"/>
+            <TableColumn fx:id="colDiagnostic" text="Diagnostic" prefWidth="200"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+</VBox>

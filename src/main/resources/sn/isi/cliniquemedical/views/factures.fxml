@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sn.isi.cliniquemedical.controller.FactureController"
+      spacing="10" style="-fx-background-color: #f4f6f8;">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Gestion des Factures" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="➕ Nouvelle Facture" onAction="#handleAjouter"
+                style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="✅ Payées" onAction="#handlePayees"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="⏳ Non Payées" onAction="#handleNonPayees"
+                style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="📋 Toutes" onAction="#handleToutes"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TableView fx:id="tableFactures" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colPatient" text="Patient" prefWidth="150"/>
+            <TableColumn fx:id="colDate" text="Date" prefWidth="130"/>
+            <TableColumn fx:id="colMontant" text="Montant" prefWidth="100"/>
+            <TableColumn fx:id="colMode" text="Mode Paiement" prefWidth="130"/>
+            <TableColumn fx:id="colStatut" text="Statut" prefWidth="100"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+</VBox>
