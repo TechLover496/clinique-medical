@@ -41,8 +41,8 @@ public class FactureController implements Initializable {
         colStatut.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getStatutPaiement().name()));
 
         colActions.setCellFactory(col -> new TableCell<>() {
-            final Button btnPayer = new Button("💰 Marquer Payé");
-            final Button btnPdf = new Button("📄 Facture PDF");
+            final Button btnPayer = new Button(" Marquer Payé");
+            final Button btnPdf = new Button(" Facture PDF");
             final HBox hbox = new HBox(5, btnPayer, btnPdf);
             {
                 btnPayer.setStyle("-fx-background-color: #27ae60; -fx-text-fill: white; -fx-cursor: hand;");

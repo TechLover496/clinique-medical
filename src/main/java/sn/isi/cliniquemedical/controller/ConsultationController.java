@@ -38,8 +38,8 @@ public class ConsultationController implements Initializable {
         colDiagnostic.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getDiagnostic()));
 
         colActions.setCellFactory(col -> new TableCell<>() {
-            final Button btnVoir = new Button("👁️ Voir");
-            final Button btnPdf = new Button("📄 Ordonnance");
+            final Button btnVoir = new Button(" Voir");
+            final Button btnPdf = new Button(" Ordonnance");
             final HBox hbox = new HBox(5, btnVoir, btnPdf);
             {
                 btnVoir.setStyle("-fx-background-color: #3498db; -fx-text-fill: white; -fx-cursor: hand;");

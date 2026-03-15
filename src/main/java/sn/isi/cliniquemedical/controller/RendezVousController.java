@@ -42,7 +42,7 @@ public class RendezVousController implements Initializable {
         colMotif.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getMotif()));
         colStatut.setCellValueFactory(d -> new SimpleStringProperty(d.getValue().getStatut().name()));
         colActions.setCellFactory(col -> new TableCell<>() {
-            final Button btnAnnuler = new Button("❌ Annuler");
+            final Button btnAnnuler = new Button(" Annuler");
             final HBox hbox = new HBox(5, btnAnnuler);
             {
                 btnAnnuler.setStyle("-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-cursor: hand;");

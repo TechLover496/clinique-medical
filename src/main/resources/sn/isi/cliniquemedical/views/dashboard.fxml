@@ -13,13 +13,13 @@
             <padding><Insets top="20" right="10" bottom="20" left="10"/></padding>
             <Label text="Clinique Médicale" style="-fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold;"/>
             <Separator style="-fx-background-color: #444;"/>
-            <Button text="🏠 Dashboard" onAction="#showDashboard" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
-            <Button text="👥 Patients" onAction="#showPatients" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
-            <Button text="📅 Rendez-vous" onAction="#showRendezVous" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
-            <Button text="🩺 Consultations" onAction="#showConsultations" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
-            <Button text="🧾 Factures" onAction="#showFactures" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
+            <Button text=" Dashboard" onAction="#showDashboard" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
+            <Button text=" Patients" onAction="#showPatients" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
+            <Button text=" Rendez-vous" onAction="#showRendezVous" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
+            <Button text=" Consultations" onAction="#showConsultations" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
+            <Button text=" Factures" onAction="#showFactures" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
             <Separator style="-fx-background-color: #444;"/>
-            <Button text="🚪 Déconnexion" onAction="#handleLogout" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #e74c3c; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
+            <Button text=" Déconnexion" onAction="#handleLogout" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: #e74c3c; -fx-alignment: CENTER-LEFT; -fx-cursor: hand;"/>
         </VBox>
     </left>
 

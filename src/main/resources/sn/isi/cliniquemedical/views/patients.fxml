@@ -15,9 +15,9 @@
     <HBox spacing="10" alignment="CENTER_LEFT">
         <TextField fx:id="searchField" promptText="Rechercher un patient..." prefWidth="300"
                    style="-fx-padding: 8; -fx-background-radius: 5;"/>
-        <Button text="🔍 Rechercher" onAction="#handleRechercher"
+        <Button text=" Rechercher" onAction="#handleRechercher"
                 style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
-        <Button text="➕ Nouveau Patient" onAction="#handleAjouter"
+        <Button text=" Nouveau Patient" onAction="#handleAjouter"
                 style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-padding: 8 15; -fx-background-radius: 5; -fx-cursor: hand;"/>
     </HBox>
 
